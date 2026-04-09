@@ -9,4 +9,13 @@ public class Usuario {
         this.dni = dni;
         this.nombre = nombre;
     }
+
+    public int GetDNI(){
+        return dni;
+    }
+
+    public String GetNombre(){
+        return nombre;
+    }
+
 }
