@@ -1,5 +1,7 @@
 package tpo;
 
+import tda.colas.ColaPU;
+
 public class Libro {
     private int isbn;
     private String titulo;
