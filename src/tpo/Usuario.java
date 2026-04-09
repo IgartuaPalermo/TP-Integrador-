@@ -5,7 +5,7 @@ public class Usuario {
     String nombre;
     // ConjuntoTDA prestamos;
 
-    public void Usuario(int dni, String nombre){
+    public Usuario(int dni, String nombre){
         this.dni = dni;
         this.nombre = nombre;
     }
