@@ -9,7 +9,7 @@ public class Libro {
     private int copiasDisponibles;
     private ColaPU listaEspera = new ColaPU();
 
-    public void Libro(int isbn, String titulo, String autor, int copiasDisponibles){
+    public Libro(int isbn, String titulo, String autor, int copiasDisponibles){
         this.isbn = isbn;
         this.titulo = titulo;
         this.autor = autor;
