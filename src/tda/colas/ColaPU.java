@@ -1,8 +1,8 @@
 package tda.colas;
 
 public class ColaPU implements ColaTDA{
-    int[] arr;  // arreglo que contiene informacion
-    int inx;  // cantidad de elementos en la cola
+    int[] arr;  
+    int inx;  
 
     public void InicializarCola() {
         arr = new int[100];
