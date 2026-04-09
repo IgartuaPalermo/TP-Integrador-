@@ -1,8 +1,8 @@
 package tpo;
 
 public class Usuario {
-    int dni;
-    String nombre;
+    private int dni;
+    private String nombre;
     // ConjuntoTDA prestamos;
 
     public Usuario(int dni, String nombre){
