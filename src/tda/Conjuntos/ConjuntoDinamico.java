@@ -1,4 +1,4 @@
-package tda.Conjuntos;
+package tda.conjuntos;
 
 public class ConjuntoDinamico implements ConjuntoTDA {
     private Nodo inicio;

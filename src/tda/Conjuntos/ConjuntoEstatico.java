@@ -1,4 +1,4 @@
-package tda.Conjuntos;
+package tda.conjuntos;
 
 public class ConjuntoEstatico implements ConjuntoTDA {
     private int[] elementos;

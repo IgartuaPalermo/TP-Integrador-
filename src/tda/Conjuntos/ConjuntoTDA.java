@@ -1,4 +1,4 @@
-package tda.Conjuntos;
+package tda.conjuntos;
 
 public interface ConjuntoTDA {
     void InicializarConjunto();  // pre: no aplica.

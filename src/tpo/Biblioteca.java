@@ -1,9 +1,9 @@
 package tpo;
 
 import tda.diccionarios.DiccionarioUsuarioTDA;
+import tda.conjuntos.ConjuntoDinamico;
+import tda.conjuntos.ConjuntoTDA;
 import tda.diccionarios.DiccionarioUsuarioDinamico;
-import tda.Conjuntos.ConjuntoTDA;
-import tda.Conjuntos.ConjuntoDinamico;
 
 public class Biblioteca {
     private Libro[] libros;

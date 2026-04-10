@@ -1,7 +1,7 @@
 package tda.mains;
 
-import tda.Conjuntos.ConjuntoTDA;
-import tda.Conjuntos.ConjuntoDinamico;
+import tda.conjuntos.ConjuntoDinamico;
+import tda.conjuntos.ConjuntoTDA;
 
 public class MainConjuntoDinamico {
 
