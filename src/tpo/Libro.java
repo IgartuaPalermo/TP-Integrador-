@@ -1,6 +1,6 @@
 package tpo;
 
-import tda.colas.ColaPU;
+import estructuras.estaticas.colas.ColaPU;
 
 public class Libro {
     private int isbn;

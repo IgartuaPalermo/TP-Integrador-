@@ -1,29 +1,29 @@
 package tpo;
 
-import tda.diccionarios.DiccionarioUsuarioTDA;
-import tda.conjuntos.ConjuntoDinamico;
-import tda.conjuntos.ConjuntoTDA;
-import tda.diccionarios.DiccionarioUsuarioDinamico;
+import estructuras.dinamicas.conjuntos.ConjuntoLD;
+import estructuras.dinamicas.diccionarios.DiccionarioUsuarioDinamico;
+import estructuras.tdas.ConjuntoTDA;
+import estructuras.tdas.DiccionarioUsuarioTDA;
 
 public class Biblioteca {
     private Libro[] libros;
     private int cantidadLibros;
     private DiccionarioUsuarioTDA usuarios;
-    private ConjuntoTDA isbnDisponibles;
+    private ConjuntoTDA librosDisponibles;
 
     public Biblioteca() {
         libros = new Libro[100];
         cantidadLibros = 0;
         usuarios = new DiccionarioUsuarioDinamico();
         usuarios.InicializarDiccionario();
-        isbnDisponibles = new ConjuntoDinamico();
-        isbnDisponibles.InicializarConjunto();
+        librosDisponibles = new ConjuntoLD();
+        librosDisponibles.InicializarConjunto();
     }
 
     public void AgregarLibro(Libro libro) {
         libros[cantidadLibros] = libro;
         cantidadLibros++;
-        isbnDisponibles.AgregarElemento(libro.GetIsbn());
+        librosDisponibles.Agregar(libro.GetIsbn());
     }
 
     public void AgregarUsuario(Usuario usuario) {
