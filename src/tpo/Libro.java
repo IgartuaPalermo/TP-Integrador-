@@ -49,6 +49,10 @@ public class Libro {
         return copiasDisponibles;
     }
 
+    public String GetAutor(){
+        return autor;
+    }
+
     public void AumentarCopias(){
         copiasDisponibles++;
     }
