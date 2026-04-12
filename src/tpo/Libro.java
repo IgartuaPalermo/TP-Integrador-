@@ -1,59 +1,77 @@
 package tpo;
 
-import estructuras.estaticas.colas.ColaPU;
+import estructurasTPO.dinamicas.ColaDeEspera.ColaLDEspera;
+import estructurasTPO.tdas.ColaDeEspera.ColaTDAEspera;
 
 public class Libro {
     private int isbn;
     private String titulo;
     private String autor;
     private int copiasDisponibles;
-    private ColaPU listaEspera = new ColaPU();
+    private ColaTDAEspera colaDeEspera;
 
-    public Libro(int isbn, String titulo, String autor, int copiasDisponibles){
+    // CONSTRUCTOR
+    public Libro(int isbn, String titulo, String autor, int copiasDisponibles) {
         this.isbn = isbn;
         this.titulo = titulo;
         this.autor = autor;
         this.copiasDisponibles = copiasDisponibles;
-        listaEspera.InicializarCola();
+        this.colaDeEspera = new ColaLDEspera();
+        this.colaDeEspera.InicializarCola();
     }
 
-    public void AgregarEspera(int dni){
-        listaEspera.Acolar(dni);
-    }
-
-    public void QuitarEspera(){
-        listaEspera.Desacolar();
-    }
-    //Podriamos combinar las funciones quitarespera y primeroespera?
-    public int PrimeroEnEspera(){
-        return listaEspera.Primero();
-    }
-
-    public boolean CheckNoHayEspera(){
-        return listaEspera.ColaVacia();
-    }
-
-    public ColaPU GetEspera() {
-        return listaEspera;
-    }
-
-    public String GetTitulo(){
-        return titulo;
-    }
-
-    public int GetIsbn(){
+    // GETTERS Y SETTERS
+    public int getIsbn() {
         return isbn;
     }
 
-    public int GetCopias(){
+    public void setIsbn(int isbn) {
+        this.isbn = isbn;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public int getCopiasDisponibles() {
         return copiasDisponibles;
     }
 
-    public void AumentarCopias(){
-        copiasDisponibles++;
+    public void setCopiasDisponibles(int copiasDisponibles) {
+        this.copiasDisponibles = copiasDisponibles;
     }
 
-    public void DisminuirCopias(){
-        copiasDisponibles--;
+    public ColaTDAEspera getColaDeEspera() {
+        return colaDeEspera;
     }
+
+    // METODOS
+    public boolean hayCopias() {
+        return this.copiasDisponibles > 0;
+    }
+
+    public void aumentarCopias() {
+        this.copiasDisponibles++;
+    }
+
+    public void disminuirCopias() {
+        if (hayCopias()) {
+            this.copiasDisponibles--;
+        } else {
+            System.out.println("Error: No hay copias disponibles para disminuir.");
+        }
+    }
+
 }
